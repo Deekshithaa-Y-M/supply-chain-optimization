@@ -1,3 +1,7 @@
-# python-for-analytics
-Beginner to Advanced curated Python coding practice for data science.
-1. Python basics - a recap
+# Supply Chain Optimization and Monte Carlo Simulation Project
+
+SupplyVal: A Python-driven framework for stochastic supply chain risk quantification and scenario-integrated equity valuation — applied to India's EV sector
+Indian EV manufacturers such as Tata Motors and Ola Electric face acute supply chain fragility: battery cells sourced from China and South Korea, semiconductor dependencies, and single-supplier concentration across critical components. Yet standard equity valuation practice treats these operational risks as static, manually assigned scenario labels — "bear case: revenue down 15%" — with no quantitative grounding in the actual probability distributions of disruption events.
+This project builds SupplyVal, a two-engine computational framework that closes this gap. The first engine uses Monte Carlo simulation (Python / NumPy / SciPy) to model supply chain disruption scenarios — sampling supplier failure probabilities, demand shock magnitudes, and logistics delay distributions across 50,000 iterations to produce a full loss distribution and Value at Risk estimates. The second engine is a three-statement financial model and DCF valuation (Python / pandas, with Excel as the output layer) for a target Indian EV company. The novel contribution is the risk translation bridge: a structured mapping that converts Monte Carlo output metrics — expected disruption cost, 95th-percentile loss, probability of revenue shortfall — directly into the bear, base, and bull scenario assumptions of the valuation model. The result is an equity valuation whose scenario weightings are derived from simulated operational reality rather than analyst intuition.
+
+The project validates Monte Carlo accuracy by comparing Python output against a benchmark Excel Data Table implementation, and delivers an interactive Excel dashboard — generated programmatically via openpyxl — as the decision-support interface for non-technical users.
